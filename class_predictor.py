@@ -63,11 +63,11 @@ class ClassPredictor:
         rgb_image=rgbd_image[:, :, :3]
         fpn_list=list()
         outputs = self.predictor(rgb_image)
-        fpn_list.append({'p2':np.around(fpnTSNE.scale_to_01_range(outputs['p2'][0, 0, :, :].cpu().detach().numpy().astype(np.int))*255),
-            'p3':np.around(fpnTSNE.scale_to_01_range(outputs['p3'][0, 0, :, :].cpu().detach().numpy().astype(np.int))*255),
-            'p4':np.around(fpnTSNE.scale_to_01_range(outputs['p4'][0, 0, :, :].cpu().detach().numpy().astype(np.int))*255),
-            'p5':np.around(fpnTSNE.scale_to_01_range(outputs['p5'][0, 0, :, :].cpu().detach().numpy().astype(np.int))*255),
-            'p6':np.around(fpnTSNE.scale_to_01_range(outputs['p6'][0, 0, :, :].cpu().detach().numpy().astype(np.int))*255),})
+        fpn_list.append({'p2':np.around(fpnTSNE.scale_to_01_range(outputs['p2'][0, 0, :, :].cpu().detach().numpy().astype(np.int_))*255),
+            'p3':np.around(fpnTSNE.scale_to_01_range(outputs['p3'][0, 0, :, :].cpu().detach().numpy().astype(np.int_))*255),
+            'p4':np.around(fpnTSNE.scale_to_01_range(outputs['p4'][0, 0, :, :].cpu().detach().numpy().astype(np.int_))*255),
+            'p5':np.around(fpnTSNE.scale_to_01_range(outputs['p5'][0, 0, :, :].cpu().detach().numpy().astype(np.int_))*255),
+            'p6':np.around(fpnTSNE.scale_to_01_range(outputs['p6'][0, 0, :, :].cpu().detach().numpy().astype(np.int_))*255),})
         return fpn_list
 
 

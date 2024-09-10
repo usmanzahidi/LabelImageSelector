@@ -1,6 +1,5 @@
 """
 Started by: Usman Zahidi (uz) {16/02/22}
-
 """
 import os
 import numpy as np, cv2,argparse,logging
